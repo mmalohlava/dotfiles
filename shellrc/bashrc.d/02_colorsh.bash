@@ -65,7 +65,7 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Color for command line
-export PS1="\h:\W \u\$ "
-export PS1='\[\e[0;31m\]\h:\W \u\$\[\e[m\] '
+#export PS1="\h:\W \u\$ "
+#export PS1='\[\e[0;31m\]\h:\W \u\$\[\e[m\] '
 
 
