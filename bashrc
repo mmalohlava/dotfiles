@@ -41,11 +41,4 @@ if [ -f ~/.bashrc_local_after ]; then
     source ~/.bashrc_local_after
 fi
 
-# Secret stuff
-#export HOMEBREW_GITHUB_API_TOKEN="b228aa7e1abf6b7ffb56dad7f3fdc9ca65b96944"
-#export GISOME_GITHUB_API_TOKEN="b1b0ac52623659c065260f1fe98acc85fd8b9fa3"
-#export PRS_GTIHUB_API_TOKEN="d702e783b120f7c1dff5be3a689dd13a4481a258"
-
-# added by travis gem
-#[ -f /Users/michal/.travis/travis.sh ] && source /Users/michal/.travis/travis.sh
 
