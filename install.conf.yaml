@@ -6,10 +6,25 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.my_configs.vim:
-    ~/bin/lscpu:
-    ~/bin/mountnas.sh:
-    ~/bin/mountnas_public:
-    ~/bin/umountnas:
-    ~/bin/pdiff.sh:
-    ~/bin/sjk:
+    ~/.vimrc:
+    ~/.zshrc:
+    ~/bin/lscpu: bin/lscpu
+    ~/bin/mountnas.sh: bin/mountnas.sh
+    ~/bin/mountnas_public.sh: bin/mountnas_public.sh
+    ~/bin/umountnas.sh: bin/umountnas.sh
+    ~/bin/pdiff.sh: bin/pdiff.sh
+    ~/bin/sjk: bin/sjk
+
+- shell:
+    -
+        command: test -d ~/.oh-my-zsh || (git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && chsh -s /bin/zsh )
+        stdin: true
+        stdout: true
+        stderr: true
+        description: Install oh-my-zsh if necessary
+    -
+        command: test -d ~/.vim_runtime || git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+        stdout: true
+        stderr: true
+        description: Install ultimate vimrc
 
