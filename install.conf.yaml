@@ -1,3 +1,15 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - link:
     ~/.gitconfig: gitconfig
+    ~/.my_configs.vim:
+    ~/bin/lscpu:
+    ~/bin/mountnas.sh:
+    ~/bin/mountnas_public:
+    ~/bin/umountnas:
+    ~/bin/pdiff.sh:
+    ~/bin/sjk:
 

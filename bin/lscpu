@@ -1,0 +1,4 @@
+#!/usr/bin/env /bin/bash
+echo "CPU(s): $(sysctl -n hw.ncpu)"
+
+

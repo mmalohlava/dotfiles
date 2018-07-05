@@ -5,7 +5,7 @@ Organized by [dotbot](https://github.com/anishathalye/dotbot/)
 # Installation
 
 ```
-git clone https://github.com/mmalohlava/dotfiles/ && cd dotfiles && ./install`, even on a freshly installed system!
+git clone https://github.com/mmalohlava/dotfiles/ && cd dotfiles && ./install
 ``````
 
 Note: The `install` script is merely a shim that checks out the appropriate
