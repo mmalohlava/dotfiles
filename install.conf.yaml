@@ -8,6 +8,7 @@
     ~/.my_configs.vim:
     ~/.vimrc:
     ~/.zshrc:
+    ~/.shellrc:
     ~/bin/lscpu: bin/lscpu
     ~/bin/mountnas.sh: bin/mountnas.sh
     ~/bin/mountnas_public.sh: bin/mountnas_public.sh
