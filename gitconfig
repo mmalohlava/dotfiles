@@ -1,0 +1,77 @@
+[user]
+    name = mmalohlava
+    email = michal@h2o.ai
+    
+[alias]
+    llog = log --oneline --decorate --graph
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lgp = "!f() { git lg -p \"$@\" ; }; f"
+    ci = commit
+    ici = commit --interactive
+    st = status -sb
+    co = checkout
+    out = "!f() { git lg @{u}.. 2>/dev/null || echo '  !!! No remote configured for current branch !!!'; }; f"
+    outdiff = "!f() { git diff origin/master..HEAD; }; f"
+    info ="!f() { echo 'Current branch:'; git branch -vv; echo; echo 'Outgoing changes:'; git --no-pager out; echo; echo 'Local changes: '; git ls-files -m -t ; echo; echo \"Difference from branch $(git config --get 'lgtobase.baseBranch'):\"; git lgtobase; echo; }; f"
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    dotty = "!f() { git graphviz \"$@\" | dotty /dev/stdin; }; f"
+    bdiff = "diff --name-status"
+    forkpoint = "!f() { git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1; }; f" 
+    basebranch = "!f() { git forkpoint | sed 's/.*\\[\\([^~]*\\).*\\].*/\\1/'; }; f" #| sed -e 's/[\^~].*//'; }; f"
+    lgtobase = "!f() { git lg $(git config --get 'lgtobase.baseBranch')..HEAD; }; f"
+
+    # use as git tips origin/pu ^origin/next | git oneline - which is a list of the tips of linear sequences of commits that are in pu, but not in next. 
+    oneline ="!_() { $(test $# -eq 0 && echo xargs -L1) git log --no-walk --decorate --oneline \"$@\"; }; _"
+    tips = "!_() { t=$(git rev-list --no-merges --max-count=1 \"$@\"); if test -n \"$t\"; then echo $t; _ \"$@\" ^$t; fi; }; _"
+    tip  = "rev-list -n 1 HEAD"
+    findlastchange = "rev-list -n 1 HEAD --"
+    unmerged = "ls-files --unmerged"
+    fdiff = diff --stat
+    ss = "show -s --format=\"git cherry-pick %H # \"%s\" by %an (%ad)\""
+    pullify = config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
+    shwo = show
+    find = "!git log --color -p -S "
+    g = grep --extended-regexp --break --heading --line-number
+    search = log --no-merges -i -E --pretty='%h (%ad) - [%an] %s %d' --date=format:'%b %d %Y' --grep
+    gone = "!f() { git branch -vv | grep gone; }; f"
+    rmgone = "!f() { git gone; git gone | cut -d\" \"  -f3 | xargs git branch -D; }; f"
+
+[color]
+	ui = true
+[merge]
+    conflictstyle = diff3
+    # Always show a diffstat at the end of a merge:
+	stat = true
+[diff]
+    tool=meld
+    guitool=meld
+    # Tell git diff to use mnemonic prefixes (index, work tree, commit, object) instead of the standard a and b notation:
+	mnemonicprefix = true
+	indentHeuristic = true
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
+[fetch]
+	prune = true
+#[core]
+#	whitespace = trailing-space,space-before-tab
+[commit]
+    verbose = true
+[interactive]
+    diffFilter = diff-highlight
+[core]
+# See https://github.com/so-fancy/diff-so-fancy
+    pager = diff-so-fancy | less --tabs=4 -RFX # Default search pattern disabled: --pattern='^(added|deleted|modified): '
+[diff-so-fancy]
+	markEmptyLines = false
+	changeHunkIndicators = true
+	stripLeadingSymbols = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[stash]
+    showPatch = true
+[lgtobase]
+    baseBranch = master
