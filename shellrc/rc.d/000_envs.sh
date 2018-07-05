@@ -12,3 +12,5 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$BIN_DIR/arcanist/bin:$PATH
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+set -o vi
+

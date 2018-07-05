@@ -60,3 +60,12 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+# Color terminal
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Color for command line
+export PS1="\h:\W \u\$ "
+export PS1='\[\e[0;31m\]\h:\W \u\$\[\e[m\] '
+
+
