@@ -49,10 +49,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx brew gradle iterm2)
+if [[ $(uname -s) -eq "Darwin" ]]; then
+    plugins=(git osx brew gradle iterm2)
+else
+    plugins=(git gradle)
+fi
 
 # User configuration
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/local/opt/pyenv/shims:/usr/local/sbin:/Users/michal/bin:/usr/local/opt/coreutils/libexec/gnubin"
 # export MANPATH="/usr/local/man:$MANPATH"
 

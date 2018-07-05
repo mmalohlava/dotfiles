@@ -8,7 +8,7 @@ export AWS_ACCESS_KEY=$AWS_ACCESS_KEY_ID
 export AWS_SECRET_KEY=$AWS_SECRET_ACCESS_KEY
 export AWS_CREDENTIAL_FILE="$EC2_HOME/0xdataAwsCredentials.properties"
 
-if [[ "$PLATFORM" -eq "Darwin" ]]; then
+if [ "$(uname -s)" == "Darwin" ]; then
     export AWS_CLOUDFORMATION_HOME="$(brew --prefix)/Cellar/aws-cfn-tools/1.0.12/libexec"
     export EC2_HOME="$(brew --prefix)/Cellar/ec2-api-tools/1.7.1.0/libexec"
 fi

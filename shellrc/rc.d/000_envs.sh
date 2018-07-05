@@ -1,6 +1,6 @@
 PLATFORM=$(uname -s)
 
-if [[ "$PLATFORM" -eq "Darwin" ]]; then
+if [ "$PLATFORM" == "Darwin" ]; then
     export BIN_DIR="$HOME/Bin"
 else
     export BIN_DIR="$HOME/bin"
