@@ -9,7 +9,7 @@ PLATFORM=$(uname -s)
 if [ "$PLATFORM" = "Darwin" ]; then
 ZSH_THEME="robbyrussell"
 else
-ZSH_THEME="agnoster"
+ZSH_THEME="dpoggi"
 fi
 
 # Uncomment the following line to use case-sensitive completion.
