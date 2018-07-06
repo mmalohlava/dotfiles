@@ -13,3 +13,6 @@ function runDaiShell() {
     runDai $id --entrypoint /bin/bash $@
 }
 
+# Dev license for DAI
+export DRIVERLESS_AI_LICENSE_FILE=$HOME/dai/license/license.sig
+
