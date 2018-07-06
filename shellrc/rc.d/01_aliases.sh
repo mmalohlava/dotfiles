@@ -5,8 +5,8 @@ alias gvim="gvim -X"
 alias peek='tee >(cat 1>&2)'
 
 if [ "$PLATFORM" = "Darwin" ]; then
-alias vim='mvim -v'
-alias ls="ls -GpFh"
+    alias vim='mvim -v'
+    alias ls="ls -GpFh"
 fi
 
 # Correct typos
