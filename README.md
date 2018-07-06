@@ -5,8 +5,8 @@ Organized by [dotbot](https://github.com/anishathalye/dotbot/)
 # Installation
 
 ```
-git clone https://github.com/mmalohlava/dotfiles/ && cd dotfiles && ./install
-``````
+cd ~ && git clone https://github.com/mmalohlava/dotfiles/ .dotfiles && cd .dotfiles && ./install
+```
 
 Note: The `install` script is merely a shim that checks out the appropriate
 version of Dotbot and calls the full Dotbot installer. By default, the script
