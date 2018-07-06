@@ -21,3 +21,9 @@ submodule; be sure to commit your changes before running `./install`, otherwise
 the old version of Dotbot will be checked out by the install script. If using a
 subrepo, run `git fetch && git checkout origin/master` in the Dotbot directory.
 
+# Resources
+
+  - [Awesome dotfiles](https://github.com/webpro/awesome-dotfiles)
+  - [conf.d like structure](https://chr4.org/blog/2014/09/10/conf-dot-d-like-directories-for-zsh-slash-bash-dotfiles/)
+  - [Managing Your Dotfiles](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
+  - https://git.io/dotbot 💾
