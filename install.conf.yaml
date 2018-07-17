@@ -31,4 +31,10 @@
         stdout: true
         stderr: true
         description: Install ultimate vimrc
+    -
+        command: ./install-vim-plugins.sh
+        stdout: true
+        stderr: true
+        description: Install vim plugins
+
 
