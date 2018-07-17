@@ -12,7 +12,7 @@ for PLUGIN in $VIM_PLUGINS; do
     if [ -d "${dirname}" ]; then
         ( cd "${dirname}" && git pull )
     else
-        ( cd "${dirname}" && git clone "${PLUGIN}")
+        ( cd "${BASE_DIR}" && git clone "${PLUGIN}")
     fi
 done
 
