@@ -22,6 +22,9 @@ alias dload="cd $HOME/Downloads/"
 alias acroread="open -a 'Adobe Acrobat Reader DC'"
 alias vless='/usr/share/vim/vim73/macros/less.sh'
 
+# Needs: https://github.com/sharkdp/bat
+alias cat="bat"
+
 # Update dotfiles
 dfu() {
     (

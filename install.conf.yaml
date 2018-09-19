@@ -12,12 +12,15 @@
     ~/.bashrc:
     ~/.bash_profile:
     ~/.profile:
+    ~/.ctags:
     ~/bin/lscpu: bin/lscpu
     ~/bin/mountnas.sh: bin/mountnas.sh
     ~/bin/mountnas_public.sh: bin/mountnas_public.sh
     ~/bin/umountnas.sh: bin/umountnas.sh
     ~/bin/pdiff.sh: bin/pdiff.sh
     ~/bin/sjk: bin/sjk
+    ~/bin/browsh: bin/browsh
+    ~/bin/terraform: bin/terraform
 
 - shell:
     -

@@ -3,7 +3,7 @@ export DEVEL_H2O_HOME="$DEVEL_HOME/projects/h2o/repos"
 
 export H2O=$DEVEL_H2O_HOME/NEW.h2o.github
 export H2O2=$DEVEL_H2O_HOME/h2o2
-export SPARK=~/Devel/projects/h2o/sandbox/spark
+export SPARK=$DEVEL_HOME/projects/h2o/sandbox/spark
 export SPARKLING_WATER=$DEVEL_H2O_HOME/sparkling-water
 export H2OAI_HOME=$DEVEL_H2O_HOME/h2oai/h2oai
 export DATABLE_HOME=$DEVEL_H2O_HOME/datatable
