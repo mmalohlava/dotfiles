@@ -9,3 +9,5 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 set t_Co=256
 colorscheme PaperColor
+set background=dark
+
