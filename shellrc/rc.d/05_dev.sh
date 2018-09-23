@@ -1,5 +1,6 @@
-export DEVEL_HOME="$HOME/Devel/"
-export DEVEL_H2O_HOME="$DEVEL_HOME/projects/h2o/repos"
+# The following variables are defined in 000_envs.sh
+#export DEVEL_HOME="$HOME/Devel/"
+#export DEVEL_H2O_HOME="$DEVEL_HOME/projects/h2o/repos"
 
 export H2O=$DEVEL_H2O_HOME/NEW.h2o.github
 export H2O2=$DEVEL_H2O_HOME/h2o2
