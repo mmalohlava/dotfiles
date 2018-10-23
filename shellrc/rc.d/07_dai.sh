@@ -4,13 +4,14 @@ function runDai() {
 
     id=$1
     shift
-    nvidia-docker run $@ -e DRIVERLESS_AI_DEBUG_LOG=1 -v /home/michal/dai/license/:/license -e DRIVERLESS_AI_AWS_AUTH="False" -e DRIVERLESS_AI_ENABLED_HDFS_AUTH_TYPE='noauth'  -p 12333:12345 --init -it --rm -v /tmp/dtmp/:/tmp -v /tmp/dlog/:/log -u $(id -u):$(id -g) docker.h2o.ai/opsh2oai/h2oai-runtime:$id
+    nvidia-docker run $@ -e DRIVERLESS_AI_DEBUG_LOG=1 -v /home/michal/dai/license/:/license -e DRIVERLESS_AI_AWS_AUTH="False" -e DRIVERLESS_AI_ENABLED_HDFS_AUTH_TYPE='noauth'  -p 12333:12345 --init -it --rm -v /tmp/dtmp/:/tmp -v /tmp/dlog/:/log -u $(id -u):$(id -g) $id
 }
 
 function runDaiShell() {
     id=$1
     shift
-    runDai $id --entrypoint /bin/bash $@
+    # configure size of terminal based on https://github.com/moby/moby/issues/33794
+    runDai $id --entrypoint /bin/bash -e COLUMNS="`tput cols`" -e LINES="`tput lines`" $@
 }
 
 # Dev license for DAI
