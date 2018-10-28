@@ -21,6 +21,7 @@
     ~/bin/sjk: bin/sjk
     ~/bin/browsh: bin/browsh
     ~/bin/terraform: bin/terraform
+    ~/bin/dive: bin/dive
 
 - shell:
     -
