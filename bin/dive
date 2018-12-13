@@ -3,5 +3,5 @@
 docker run --rm -it \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v $(which docker):/bin/docker \
-    wagoodman/dive:latest $@
+    wagoodman/dive:latest "$@"
 

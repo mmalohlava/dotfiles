@@ -3,5 +3,5 @@
 CMD="docker run -i -t -u $(id -u):$(id -g) -w $(pwd) -v $(pwd):$(pwd) hashicorp/terraform:light"
 echo "Running: $CMD"
 
-exec $CMD $@
+exec $CMD "$@"
 
