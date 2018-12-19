@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -x
+if [ ! -z "$1" ]; then
+    prefix="-a -c $1"
+else
+    prefix=
+fi
+
+watch -n1 "lsof -u $(id -u -n) ${prefix}  -w | grep REG"
