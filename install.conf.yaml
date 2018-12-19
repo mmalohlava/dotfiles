@@ -23,6 +23,8 @@
     ~/bin/terraform: bin/terraform
     ~/bin/dive: bin/dive
     ~/bin/ansible: bin/ansible
+    ~/bin/watch_opened_files: bin/watch_opened_files
+    ~/bin/watch_user_processes: bin/watch_user_processes
 
 - shell:
     -
