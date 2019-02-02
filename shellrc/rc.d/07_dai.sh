@@ -14,6 +14,12 @@ function runDaiShell() {
     runDai $id --entrypoint /bin/bash -e COLUMNS="`tput cols`" -e LINES="`tput lines`" $@
 }
 
+function dockerExec() {
+    id=$1
+    shift
+    docker exec -it -e COLUMNS="`tput cols`" -e LINES="`tput lines`" $id /bin/bash
+}
+
 # Dev license for DAI
 export DRIVERLESS_AI_LICENSE_FILE=$HOME/dai/license/license.sig
 
