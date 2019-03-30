@@ -12,7 +12,7 @@
     co = checkout
     out = "!f() { git lg @{u}.. 2>/dev/null || echo '  !!! No remote configured for current branch !!!'; }; f"
     outdiff = "!f() { git diff origin/master..HEAD; }; f"
-    info ="!f() { echo 'Current branch:'; git branch -vv; echo; echo 'Outgoing changes:'; git --no-pager out; echo; echo 'Local changes: '; git ls-files -m -t ; echo; echo \"Difference from branch $(git config --get 'lgtobase.baseBranch'):\"; git lgtobase; echo; }; f"
+    info ="!f() { echo 'Current branch:'; git branch -vv --color=always | grep --color=never -v 'rel-'; echo; echo 'Outgoing changes:'; git --no-pager out; echo; echo 'Local changes: '; git ls-files -m -t ; echo; echo \"Difference from branch $(git config --get 'lgtobase.baseBranch'):\"; git lgtobase; echo; }; f"
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
     dotty = "!f() { git graphviz \"$@\" | dotty /dev/stdin; }; f"
     bdiff = "diff --name-status"
