@@ -81,6 +81,8 @@ function findf {
 function dcexec() {
     id=$1
     shift
-    docker exec -it $@ ${id} /bin/bash
+    docker exec -it $@ "${id}" /bin/bash
 }
 
+# A simple example printer
+example() { echo "EXAMPLE:"; echo; echo " $@"; echo; echo "OUTPUT:"; echo ; eval "$@" | sed 's/^/ /'; }

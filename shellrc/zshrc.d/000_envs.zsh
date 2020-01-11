@@ -11,7 +11,6 @@ ZSH_THEME="robbyrussell"
 else
 ZSH_THEME="dpoggi"
 fi
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

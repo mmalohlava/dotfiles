@@ -33,3 +33,10 @@ function! I18n(text, rlist)
     return l:r
 endfunction
 
+"
+" Setup ReST tables
+"
+" Use: ,tm to enable table mode: https://github.com/dhruvasagar/vim-table-mode
+let g:table_mode_header_fillchar='='
+let g:table_mode_corner_corner='+'
+
