@@ -4,9 +4,18 @@ alias gvim="gvim -X"
 # Mirror stdout to stderr, useful for seeing data going through a pipe
 alias peek='tee >(cat 1>&2)'
 
+# Configure ls
 if [ "$PLATFORM" = "Darwin" ]; then
     alias vim='mvim -v'
     alias ls="ls -GpFh"
+fi
+
+if [ $(which exa) ]; then
+    #alias ls='napsat installacni script pro darwin (brew install bat exa git git-sizer ranger)'
+    alias ls='exa -al --color=always --group-directories-first'
+    alias la='exa -a --color=always --group-directories-first'
+    alias ll='exa -l --color=always --group-directories-first'
+    alias lt='exa -aT --color=always --group-directories-first' # Tree listing
 fi
 
 # Correct typos
@@ -23,7 +32,9 @@ alias acroread="open -a 'Adobe Acrobat Reader DC'"
 alias vless='/usr/share/vim/vim73/macros/less.sh'
 
 # Needs: https://github.com/sharkdp/bat
+if [ $(which bat) ]; then
 alias cat="bat"
+fi
 
 # Update dotfiles
 dfu() {
