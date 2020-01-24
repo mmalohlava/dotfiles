@@ -10,7 +10,7 @@ if [ "$PLATFORM" = "Darwin" ]; then
     alias ls="ls -GpFh"
 fi
 
-if [ $(which exa) ]; then
+if which exa >/dev/null; then
     #alias ls='napsat installacni script pro darwin (brew install bat exa git git-sizer ranger)'
     alias ls='exa -al --color=always --group-directories-first'
     alias la='exa -a --color=always --group-directories-first'
@@ -32,8 +32,8 @@ alias acroread="open -a 'Adobe Acrobat Reader DC'"
 alias vless='/usr/share/vim/vim73/macros/less.sh'
 
 # Needs: https://github.com/sharkdp/bat
-if [ $(which bat) ]; then
-alias cat="bat"
+if which bat >/dev/null; then
+    alias cat="bat"
 fi
 
 # Update dotfiles
