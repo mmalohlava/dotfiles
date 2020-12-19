@@ -23,3 +23,5 @@ if [ -d $HOME/.shellrc/login.d ]; then
   done
 fi
 
+
+export PATH="$HOME/.poetry/bin:$PATH"

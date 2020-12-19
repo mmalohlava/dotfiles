@@ -77,7 +77,7 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 #if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Added by anaconda
-export PATH="$BIN_DIR/anaconda2/bin:$PATH"
+export PATH="$BIN_DIR/anaconda3/anaconda3/bin:$PATH"
 
 # From: https://stackoverflow.com/questions/3425340/how-can-i-capture-the-stdout-from-a-process-that-is-already-running
 capture() {
