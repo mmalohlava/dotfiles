@@ -25,6 +25,8 @@
     ~/bin/ansible: bin/ansible
     ~/bin/watch_opened_files: bin/watch_opened_files
     ~/bin/watch_user_processes: bin/watch_user_processes
+    ~/bin/git-open: bin/git-open
+    ~/bin/git-activity: bin/git-activity
 
 - shell:
     -
