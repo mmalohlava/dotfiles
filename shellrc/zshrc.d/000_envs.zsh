@@ -8,6 +8,7 @@ PLATFORM=$(uname -s)
 
 if [ "$PLATFORM" = "Darwin" ]; then
 ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 else
 ZSH_THEME="dpoggi"
 fi
@@ -53,8 +54,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# List of plugins:
+#  - zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 if [[ $(uname -s) -eq "Darwin" ]]; then
-    plugins=(git osx brew gradle iterm2)
+    plugins=(git osx brew gradle iterm2 zsh-autosuggestions)
 else
     plugins=(git gradle)
 fi
