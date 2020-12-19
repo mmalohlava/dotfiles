@@ -17,7 +17,7 @@ function runDaiShell() {
 }
 
 function dockerExec() {
-    id=$1
+    id=${1:-$(docker ps -q | head -n1)}
     shift
     docker exec -it -e COLUMNS="`tput cols`" -e LINES="`tput lines`" $id /bin/bash
 }

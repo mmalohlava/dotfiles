@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+# See: https://bitbucket.org/ssaasen/git-pastiche/src/master/bin/git-activity
+set -e
+
+REMOTE=origin
+
+red=$(tput setaf 1)
+reset=$(tput sgr0)
+bold=$(tput bold)
+
+function usage() {
+    echo "usage: git open [-h|--help] [-r|--remote <remote>] <file>"
+    echo ""
+    echo "  Open given file as GitHub page."
+    echo ""
+}
+
+
+while [[ $1 = -?* ]]; do
+    case $1 in
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        -r|--remote)
+            REMOTE=$1
+    esac
+shift
+done
+
+FILE=$1
+
+if [ -z "${FILE}" ]; then
+    usage
+    exit 0
+fi
+
+if [ ! -f "${FILE}" ]; then
+    echo ""
+    echo "${red}ERROR: File '${FILE}' does not exist!${reset}"
+    echo ""
+    exit -1
+fi
+
+REPO_ROOT_DIR=$(git rev-parse --show-toplevel)
+REPO_REMOTE=$(git remote get-url "${REMOTE}"| sed -e "s|:|/|g" -e "s|^git@|https://|" -e "s|\.git$||")
+LOCAL_BRANCH=$(git branch --show-current)
+REMOTE_BRANCH=$(git rev-parse --abbrev-ref --symbolic-full-name @{upstream} 2>/dev/null || echo "")
+REMOTE_BRANCH=${REMOTE_BRANCH##origin/}
+
+if [ -z "${REMOTE_BRANCH}" ]; then
+    echo ""
+    echo "${red}ERROR: Could not open the file '${FILE}' since the local"
+    echo "branch '${LOCAL_BRANCH}' does not have remote!${reset}"
+    echo ""
+    exit -2
+fi
+
+# Compute file url
+FILE_ABS_LOC=$(realpath "${FILE}")
+FILE_REL_LOC=$(sed -e "s|${REPO_ROOT_DIR}||" <<< "${FILE_ABS_LOC}")
+
+FILE_URL="${REPO_REMOTE}/blob/${REMOTE_BRANCH}${FILE_REL_LOC}"
+
+open "${FILE_URL}" 2>/dev/null || echo "${bold}${FILE_URL}${reset}"
