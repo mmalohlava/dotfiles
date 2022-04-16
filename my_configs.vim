@@ -40,3 +40,6 @@ endfunction
 let g:table_mode_header_fillchar='='
 let g:table_mode_corner_corner='+'
 
+" Remove startup deprecation warning.
+" See :h SnipMate-deprecate
+let g:snipMate = { 'snippet_version' : 1 }
