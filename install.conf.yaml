@@ -43,6 +43,18 @@
         stderr: true
         description: Install p10k zsh theme if necessary
     -
+        command: test -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting || (mkdir -p ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting )
+        stdin: true
+        stdout: true
+        stderr: true
+        description: Install zsh-syntax-highlighting plugin if necessary
+    -
+        command: test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions || (mkdir -p ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions )
+        stdin: true
+        stdout: true
+        stderr: true
+        description: Install zsh-autosuggestions plugin if necessary
+    -
         command: test -d ~/.vim_runtime || git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
         stdout: true
         stderr: true
@@ -52,5 +64,4 @@
         stdout: true
         stderr: true
         description: Install vim plugins
-
 
