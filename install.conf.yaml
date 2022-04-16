@@ -13,6 +13,7 @@
     ~/.bash_profile:
     ~/.profile:
     ~/.ctags:
+    ~/.p10k.zsh:
     ~/bin/lscpu: bin/lscpu
     ~/bin/mountnas.sh: bin/mountnas.sh
     ~/bin/mountnas_public.sh: bin/mountnas_public.sh
@@ -35,6 +36,12 @@
         stdout: true
         stderr: true
         description: Install oh-my-zsh if necessary
+    -
+        command: test -d ~/.oh-my-zsh/custom/themes/powerlevel10k || (mkdir -p ~/.oh-my-zsh/custom/themes && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k )
+        stdin: true
+        stdout: true
+        stderr: true
+        description: Install p10k zsh theme if necessary
     -
         command: test -d ~/.vim_runtime || git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
         stdout: true

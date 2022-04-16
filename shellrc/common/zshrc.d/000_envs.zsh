@@ -21,6 +21,8 @@ fi
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
+zstyle ':omz:update' auto
+zstyle ':omz:update' frequency 7
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -57,14 +59,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # List of plugins:
 #  - zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 if [[ $(uname -s) -eq "Darwin" ]]; then
-    plugins=(git osx brew gradle iterm2 zsh-autosuggestions)
+    plugins=(git macos brew gradle iterm2 zsh-autosuggestions)
 else
     plugins=(git gradle)
 fi
-
-# User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/local/opt/pyenv/shims:/usr/local/sbin:/Users/michal/bin:/usr/local/opt/coreutils/libexec/gnubin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,19 +81,4 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-## The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/michal/Bin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/michal/Bin/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/michal/Bin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/michal/Bin/google-cloud-sdk/completion.zsh.inc'; fi
 

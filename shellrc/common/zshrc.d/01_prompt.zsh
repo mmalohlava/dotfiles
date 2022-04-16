@@ -1,3 +1,3 @@
-if [ "$(uname -s)" = "Darwin" ]; then
-    PROMPT="%(?.🍎.🍏)  $PROMPT"
-fi
+#if [ "$(uname -s)" = "Darwin" ]; then
+#    PROMPT="%(?.🍎.🍏)  $PROMPT"
+#fi

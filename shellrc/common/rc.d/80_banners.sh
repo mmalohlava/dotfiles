@@ -39,10 +39,10 @@
 #Get jobs in offices and wake up for the morning commute? (MGMT)
 #echo     "Svědomí národa je jako veliká kniha popsaná činy těch, kteří v nejdůležitějších dobách historie národa neváhali předstoupit před nepřítele a položit oběti," řekl #veterán před deseti lety při návštěvě Česka. "O svobodu se neprosí, o svobodu se bojuje,"
 #\/--------------------------------------\/"
-echo "\/----------------------------------------------------------------\/"
-echo "->  work smart, then work really hard, do not forget to have fun"
-echo "--> I tried to be normal once... I didn't like it. <--"
-echo "/\----------------------------------------------------------------/\\"
+#echo "\/----------------------------------------------------------------\/"
+#echo "->  work smart, then work really hard, do not forget to have fun"
+#echo "--> I tried to be normal once... I didn't like it. <--"
+#echo "/\----------------------------------------------------------------/\\"
 #ZBYVA=$(expr `date --date '2012-06-6 18:00 2 years'  +%s` - `date +%s`)
 #echo "-> 6.6.2012 + 2 roky: $(days $ZBYVA)"
 #echo "\/--------------------------------------\/"
