@@ -17,8 +17,8 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Load all files from .shell/login.d directory
-if [ -d $HOME/.shellrc/login.d ]; then
-  for file in $HOME/.shellrc/login.d/*.sh; do
+if [ -d $HOME/.shellrc/common/login.d ]; then
+  for file in $HOME/.shellrc/common/login.d/*.sh; do
     source $file
   done
 fi

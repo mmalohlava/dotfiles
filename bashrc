@@ -18,15 +18,15 @@ if [ -f ~/.bashrc_local_before ]; then
 fi
 
 # Load all files from .shell/bashrc.d directory
-if [ -d $HOME/.shellrc/bashrc.d ]; then
-  for file in $HOME/.shellrc/bashrc.d/*.bash; do
+if [ -d $HOME/.shellrc/common/bashrc.d ]; then
+  for file in $HOME/.shellrc/common/bashrc.d/*.bash; do
     source $file
   done
 fi
 
 # Load all files from .shell/rc.d directory
-if [ -d $HOME/.shellrc/rc.d ]; then
-  for file in $HOME/.shellrc/rc.d/*.sh; do
+if [ -d $HOME/.shellrc/common/rc.d ]; then
+  for file in $HOME/.shellrc/common/rc.d/*.sh; do
     source $file
   done
 fi

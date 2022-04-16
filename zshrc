@@ -22,15 +22,15 @@ if [ -f ~/.bashrc_local_before ]; then
 fi
 
 # Load all files from .shell/zshrc.d directory
-if [ -d $HOME/.shellrc/zshrc.d ]; then
-  for file in $HOME/.shellrc/zshrc.d/*.zsh; do
+if [ -d $HOME/.shellrc/common/zshrc.d ]; then
+  for file in $HOME/.shellrc/common/zshrc.d/*.zsh; do
     source $file
   done
 fi
 
 # Load all files from .shell/rc.d directory
-if [ -d $HOME/.shellrc/rc.d ]; then
-  for file in $HOME/.shellrc/rc.d/*.sh; do
+if [ -d $HOME/.shellrc/common/rc.d ]; then
+  for file in $HOME/.shellrc/common/rc.d/*.sh; do
     source $file
   done
 fi
