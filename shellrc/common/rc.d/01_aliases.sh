@@ -25,7 +25,6 @@ alias doc="cd $HOME/Documents"
 alias dbox="cd $HOME/Dropbox/"
 alias dload="cd $HOME/Downloads/"
 alias acroread="open -a 'Adobe Acrobat Reader DC'"
-alias vless='/usr/share/vim/vim73/macros/less.sh'
 
 # Needs: https://github.com/sharkdp/bat
 if which bat >/dev/null; then
