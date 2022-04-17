@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+HOSTNAME=$(hostname -s)
+
 # Source shared environment between Bash and Zsh
 source_sh () {
   emulate -LR sh
@@ -16,8 +18,8 @@ if [ -f $HOME/.shell_local_before ]; then
     source $HOME/.shell_local_before
 fi
 
-# Allow local customizations in the ~/.bashrc_local_before file
-if [ -f $HOME/.bashrc_local_before ]; then
+# Allow local customizations in the ~/.zshrc_local_before file
+if [ -f $HOME/.zshrc_local_before ]; then
     source $HOME/.zshrc_local_before
 fi
 
@@ -28,9 +30,21 @@ if [ -d $HOME/.shellrc/common/zshrc.d ]; then
   done
 fi
 
+if [ -d $HOME/.shellrc/local/${HOSTNAME}/zshrc.d ]; then
+  for file in $HOME/.shellrc/local/${HOSTNAME}/zshrc.d/*.zsh; do
+    source $file
+  done
+fi
+
 # Load all files from .shell/rc.d directory
 if [ -d $HOME/.shellrc/common/rc.d ]; then
   for file in $HOME/.shellrc/common/rc.d/*.sh; do
+    source $file
+  done
+fi
+
+if [ -d $HOME/.shellrc/local/${HOSTNAME}/rc.d ]; then
+  for file in $HOME/.shellrc/local/${HOSTNAME}/rc.d/*.sh; do
     source $file
   done
 fi

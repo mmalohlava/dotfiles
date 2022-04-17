@@ -1,12 +1,8 @@
-# Put your fun stuff here.
-alias gvim="gvim -X"
-
 # Mirror stdout to stderr, useful for seeing data going through a pipe
 alias peek='tee >(cat 1>&2)'
 
 # Configure ls
 if [ "$PLATFORM" = "Darwin" ]; then
-    alias vim='mvim -v'
     alias ls="ls -GpFh"
 fi
 
