@@ -1,6 +1,5 @@
 [user]
-    name = mmalohlava
-    email = michal@h2o.ai
+    name = Michal Malohlava
     
 [alias]
     llog = log --oneline --decorate --graph
