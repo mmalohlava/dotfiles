@@ -1,6 +1,6 @@
 if [ "$PLATFORM" = "Darwin" ]; then
     # Get Java home (OSX specific)
-    export JAVA_11_HOME=$(/usr/libexec/java_home -v17)
+    export JAVA_17_HOME=$(/usr/libexec/java_home -v17)
     export JAVA_10_HOME=$(/usr/libexec/java_home -v10)
     export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
     export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
