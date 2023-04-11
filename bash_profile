@@ -16,5 +16,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-export PATH="$HOME/.poetry/bin:$PATH"
