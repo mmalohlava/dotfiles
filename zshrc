@@ -59,4 +59,4 @@ if [ -f $HOME/.zshrc_local_after ]; then
     source $HOME/.zshrc_local_after
 fi
 
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

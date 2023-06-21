@@ -6,6 +6,7 @@ VIM_PLUGINS="https://github.com/NLKNguyen/papercolor-theme \
     https://github.com/cohama/agit.vim \
     https://github.com/neoclide/coc.nvim.git@release \
     https://github.com/dhruvasagar/vim-table-mode.git \
+    https://github.com/junegunn/fzf \
     https://github.com/junegunn/fzf.vim"
 
 BASE_DIR=${HOME}/.vim_runtime/my_plugins
