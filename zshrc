@@ -60,3 +60,4 @@ if [ -f $HOME/.zshrc_local_after ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+. "$HOME/.cargo/env"
