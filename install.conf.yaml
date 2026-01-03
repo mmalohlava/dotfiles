@@ -9,8 +9,6 @@
     ~/.vimrc:
     ~/.zshrc:
     ~/.shellrc:
-    ~/.bashrc:
-    ~/.bash_profile:
     ~/.profile:
     ~/.ctags:
     ~/.p10k.zsh:
