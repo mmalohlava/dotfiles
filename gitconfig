@@ -5,7 +5,7 @@
 [includeIf "gitdir:~/Repos/github.com/mmalohlava/"]
     path = .gitconfig-personal-mmalohlava
 
-[includeIf "gitdir:~/github.com/h2oai/"]
+[includeIf "gitdir:~/Github.com/h2oai/"]
     path = .gitconfig-work-mmalohlava
 
 [alias]
