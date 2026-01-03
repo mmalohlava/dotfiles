@@ -1,7 +1,13 @@
 [user]
     name = Michal Malohlava
-	email = michal@h2o.ai
+    email = michal.malohlava@gmail.com
     
+[includeIf "gitdir:~/Repos/github.com/mmalohlava/"]
+    path = .gitconfig-personal-mmalohlava
+
+[includeIf "gitdir:~/github.com/h2oai/"]
+    path = .gitconfig-work-mmalohlava
+
 [alias]
     llog = log --oneline --decorate --graph
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -38,45 +44,72 @@
 
 [color]
 	ui = true
+
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
     # Always show a diffstat at the end of a merge:
 	stat = true
+
 [diff]
     tool=meld
     guitool=meld
     # Tell git diff to use mnemonic prefixes (index, work tree, commit, object) instead of the standard a and b notation:
 	mnemonicprefix = true
 	indentHeuristic = true
+    algorithm=histogram
+
 [push]
 	default = simple
+
 [branch]
 	autosetuprebase = always
+
 [fetch]
 	prune = true
 #[core]
 #	whitespace = trailing-space,space-before-tab
+
 [commit]
     verbose = true
+
 [interactive]
-    diffFilter = diff-so-fancy --patch
+    #diffFilter = diff-so-fancy --patch
+    diffFilter = delta --color-only
+
 [core]
-# See https://github.com/so-fancy/diff-so-fancy
-    pager = diff-so-fancy | less --tabs=4 -RFX # Default search pattern disabled: --pattern='^(added|deleted|modified): '
+    # See https://github.com/so-fancy/diff-so-fancy
+    #pager = diff-so-fancy | less --tabs=4 -RFX # Default search pattern disabled: --pattern='^(added|deleted|modified): '
+    pager = delta
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
 [diff-so-fancy]
 	markEmptyLines = false
 	changeHunkIndicators = true
 	stripLeadingSymbols = false
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+
 [stash]
     showPatch = true
+
 [lgtobase]
     baseBranch = master
+
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
-[includeIf "gitdir:~/Github.com/mmalohlava/"]
-    path = ~/Github.com/mmalohlava/.gitconfig
+
+[init]
+	defaultBranch = main
+
+[rerere]
+	enabled = true
+
+[pull]
+	rebase = true
