@@ -52,14 +52,4 @@
         stdout: true
         stderr: true
         description: Install zsh-autosuggestions plugin if necessary
-    -
-        command: test -d ~/.vim_runtime || git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-        stdout: true
-        stderr: true
-        description: Install ultimate vimrc
-    -
-        command: ./install-vim-plugins.sh
-        stdout: true
-        stderr: true
-        description: Install vim plugins
 
