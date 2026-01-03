@@ -66,9 +66,6 @@
 
 [fetch]
 	prune = true
-#[core]
-#	whitespace = trailing-space,space-before-tab
-
 [commit]
     verbose = true
 
@@ -80,6 +77,8 @@
     # See https://github.com/so-fancy/diff-so-fancy
     #pager = diff-so-fancy | less --tabs=4 -RFX # Default search pattern disabled: --pattern='^(added|deleted|modified): '
     pager = delta
+    editor = nvim
+#	whitespace = trailing-space,space-before-tab
 
 [delta]
     navigate = true  # use n and N to move between diff sections
