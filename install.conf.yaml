@@ -25,6 +25,8 @@
     ~/bin/git-open: bin/git-open
     ~/bin/git-activity: bin/git-activity
     ~/.claude/commands: claude/commands/
+    ~/.gitconfig-personal-mmalohlava:
+    ~/.gitconfig-work-mmalohlava:
 
 - shell:
     -

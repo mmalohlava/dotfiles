@@ -8,6 +8,9 @@
 [includeIf "gitdir:~/Github.com/h2oai/"]
     path = .gitconfig-work-mmalohlava
 
+[includeIf "gitdir:~/github.com/h2oai/"]
+    path = .gitconfig-work-mmalohlava
+
 [alias]
     llog = log --oneline --decorate --graph
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

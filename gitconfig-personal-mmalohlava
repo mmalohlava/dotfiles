@@ -1,0 +1,15 @@
+[user]
+    name = Michal Malohlava
+    email = michal.malohlava@gmail.com
+
+[commit]
+    gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[gpg "x509"]
+	program = gitsign
+
+[gpg]
+	format = x509
