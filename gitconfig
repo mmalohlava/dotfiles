@@ -1,5 +1,6 @@
 [user]
     name = Michal Malohlava
+	email = michal@h2o.ai
     
 [alias]
     llog = log --oneline --decorate --graph
@@ -10,7 +11,7 @@
     st = status -sb
     co = checkout
     out = "!f() { git lg @{u}.. 2>/dev/null || echo '  !!! No remote configured for current branch !!!'; }; f"
-    outdiff = "!f() { git diff origin/master..HEAD; }; f"
+    outdiff = "!f() { git diff origin/$(git config --get 'lgtobase.baseBranch')..HEAD; }; f"
     info ="!f() { echo 'Current branch:'; git branch -vv --color=always | grep --color=never -v 'rel-'; echo; echo 'Outgoing changes:'; git --no-pager out; echo; echo 'Local changes: '; git ls-files -m -t ; echo; echo \"Difference from branch $(git config --get 'lgtobase.baseBranch'):\"; git lgtobase; echo; }; f"
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
     dotty = "!f() { git graphviz \"$@\" | dotty /dev/stdin; }; f"
@@ -58,7 +59,7 @@
 [commit]
     verbose = true
 [interactive]
-    diffFilter = diff-highlight
+    diffFilter = diff-so-fancy --patch
 [core]
 # See https://github.com/so-fancy/diff-so-fancy
     pager = diff-so-fancy | less --tabs=4 -RFX # Default search pattern disabled: --pattern='^(added|deleted|modified): '
@@ -70,7 +71,12 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [stash]
     showPatch = true
 [lgtobase]
     baseBranch = master
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+[includeIf "gitdir:~/Github.com/mmalohlava/"]
+    path = ~/Github.com/mmalohlava/.gitconfig

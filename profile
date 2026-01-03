@@ -23,5 +23,3 @@ if [ -d $HOME/.shellrc/common/login.d ]; then
   done
 fi
 
-. "$HOME/.cargo/env"
-. "$HOME/.rye/env"

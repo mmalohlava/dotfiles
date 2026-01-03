@@ -6,12 +6,12 @@ if [ "$PLATFORM" = "Darwin" ]; then
     alias ls="ls -GpFh"
 fi
 
-if which exa >/dev/null; then
-    #alias ls='napsat installacni script pro darwin (brew install bat exa git git-sizer ranger)'
-    alias ls='exa -al --color=always --group-directories-first'
-    alias la='exa -a --color=always --group-directories-first'
-    alias ll='exa -l --color=always --group-directories-first'
-    alias lt='exa -aT --color=always --group-directories-first' # Tree listing
+if which eza >/dev/null; then
+    #alias ls='napsat installacni script pro darwin (brew install bat eza git git-sizer ranger)'
+    alias ls='eza -al --color=always --group-directories-first'
+    alias la='eza -a --color=always --group-directories-first'
+    alias ll='eza -l --color=always --group-directories-first'
+    alias lt='eza -aT --color=always --group-directories-first' # Tree listing
 fi
 
 # Correct typos

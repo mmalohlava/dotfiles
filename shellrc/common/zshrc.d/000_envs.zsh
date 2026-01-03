@@ -59,9 +59,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # List of plugins:
 #  - zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 if [[ $(uname -s) -eq "Darwin" ]]; then
-    plugins=(git macos brew gradle iterm2 zsh-autosuggestions colored-man-pages zsh-syntax-highlighting)
+    plugins=(git macos brew iterm2 zsh-autosuggestions colored-man-pages zsh-syntax-highlighting)
 else
-    plugins=(git gradle zsh-autosuggestions colored-man-pages zsh-syntax-highlighting)
+    plugins=(git zsh-autosuggestions colored-man-pages zsh-syntax-highlighting)
 fi
 
 source $ZSH/oh-my-zsh.sh

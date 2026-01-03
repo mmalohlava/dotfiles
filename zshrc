@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 HOSTNAME=$(hostname -s)
 
 # Source shared environment between Bash and Zsh
@@ -60,4 +53,26 @@ if [ -f $HOME/.zshrc_local_after ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-. "$HOME/.cargo/env"
+
+
+alias gam="$HOME/bin/gam7/gam"
+
+# added by Snowflake SnowflakeCLI installer v1.0
+export PATH="$HOME/Applications/SnowflakeCLI.app/Contents/MacOS/:$PATH"
+
+source "$HOME/.config/broot/launcher/bash/br"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
