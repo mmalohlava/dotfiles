@@ -5,8 +5,6 @@
 
 - link:
     ~/.gitconfig: gitconfig
-    ~/.my_configs.vim:
-    ~/.vimrc:
     ~/.zshrc:
     ~/.shellrc:
     ~/.profile:
@@ -26,6 +24,7 @@
     ~/bin/watch_user_processes: bin/watch_user_processes
     ~/bin/git-open: bin/git-open
     ~/bin/git-activity: bin/git-activity
+    ~/.claude/commands: claude/commands/
 
 - shell:
     -
