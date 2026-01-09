@@ -2,7 +2,7 @@
 description: Read the given specification and refine it by asking user detailed questions.
 ---
 
-Your task is to first help me refine a specification for my new project in $ARGUMENTS.
+Your task is to help me refine a specification for my new project in $ARGUMENTS.
 
 Use the AskUserQuestion Tool to help refine the specification in $ARGUMENTS by interviewing me and gathering requirements and details about the project implementation,
 UI & UX, tech stack, concern s, tradeoffs, etc.
