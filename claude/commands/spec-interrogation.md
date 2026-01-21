@@ -1,11 +1,12 @@
 ---
 description: Read the given specification and refine it by asking user detailed questions.
+argument-hint: [file with specification]
 ---
 
 Your task is to help me refine a specification for my new project in $ARGUMENTS.
 
 Use the AskUserQuestion Tool to help refine the specification in $ARGUMENTS by interviewing me and gathering requirements and details about the project implementation,
-UI & UX, tech stack, concern s, tradeoffs, etc.
+UI & UX, tech stack, concerns, tradeoffs, etc.
 
 Make sure questions are not obvious and probe deeper into the underlying needs and constraints.
 
