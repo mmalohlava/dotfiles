@@ -11,4 +11,6 @@ UI & UX, tech stack, concerns, tradeoffs, etc.
 Make sure questions are not obvious and probe deeper into the underlying needs and constraints.
 
 Interview me continually and systematically until the spec is complete.
-Document all responses and insights to create a comprehensive and well-structured specification that serves as the foundation for the project.
+Document all responses and insights to create a comprehensive and well-structured specification 
+that serves as the foundation for the project.
+Make the specification extremely concise. Sacrifice grammar for the sake of concision.
